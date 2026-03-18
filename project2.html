@@ -105,10 +105,26 @@
                 <div class="col-xl-10 offset-xl-1">
                     <h2 class="mb-4">Watch Video</h2>
                         <div class="video-container">
-                            <iframe src="https://drive.google.com/file/d/1iigoAwKTwLoEIRyharlw4b2-kJ1iZSdB/preview" width="640" height="480" allow="autoplay;fullscreen"></iframe>
+    <video id="myVideo" class="w-100" muted playsinline poster="images/project-2_poster.png" style="height:auto; border-radius:10px; cursor:pointer;">
+    <source src="videos/Trailer_PBD.mp4" type="video/mp4">
+</video>
+
+<script>
+const video = document.getElementById('myVideo');
+
+// 클릭하면 재생 + 소리 ON
+video.addEventListener('click', () => {
+    if (video.paused) {
+        video.muted = false;
+        video.volume = 0.08;
+        video.play();
+    } else {
+        video.pause();
+    }
+});
+</script>
                         </div> <!-- end of video-container -->
-                    <p>This is Codebase Engine Project #1</p>
-                    <p class="mb-5">write something</p>
+                    <p>C 코드베이스 엔진 2인 프로젝트</p>
                     <a class="btn-solid-reg mb-5" href="https://github.com/Sumsin5969/Project_P" target="_blank" rel="noopener noreferrer">View on Github</a>
                 </div> <!-- end of col -->
             </div> <!-- end of row -->
